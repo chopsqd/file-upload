@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #666;
+}
+
+.container {
+    padding-top: 5rem;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 6px;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.btn {
+    color: #42b983;
+    border-radius: 99px;
+    border: 1px solid #42b983;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    outline: none;
+    background: #fff;
+    transition: .25s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.btn.primary {
+    background: #42b983;
+    color: #fff;
+}
+
+.btn:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.preview__img {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.preview__img.removing {
+    transform: scale(0);
+    transition: .3s;
+}
+
+.preview__img img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.preview__img:hover .preview__remove {
+    top: 0;
+}
+
+.preview__img:hover .preview__info {
+    bottom: 0;
+}
+
+.preview__remove {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.preview__info {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    height: 24px;
+    font-size: .8rem;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    transition: .25s;
+}
+
+.preview__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #42b983;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+}
